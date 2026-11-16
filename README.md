@@ -1,25 +1,34 @@
-# Ameli - Base de données SQLite
+# Data Ameli · Base relationnelle SQLite
 
-Projet universitaire réalisé en équipe. L’objectif était de structurer des données agrégées de l’Assurance maladie dans une base relationnelle. Le [rapport du projet](Rapport.pdf) présente le cahier des charges et la conception de la base.
+Ce dépôt présente la partie modélisation d’un projet universitaire réalisé en équipe. La base regroupe des données agrégées sur les prescriptions, les honoraires et la démographie des professions de santé, reliées à des référentiels géographiques.
 
-## Contenu du dépôt
-
-- `dabase.db` contient la base SQLite du projet. Le fichier d’environ 278 Mo est stocké avec Git LFS.
-- `Rapport.pdf` contient le rapport de conception.
+[Rapport de conception](Rapport.pdf) · [Application web d’exploration](https://github.com/Kajan94/site-amelie)
 
 ## Ouvrir la base
 
-Installe [Git LFS](https://docs.github.com/en/repositories/working-with-files/managing-large-files/installing-git-large-file-storage), puis exécute ces commandes.
+`dabase.db` est stockée dans Git LFS. Installer [Git LFS](https://git-lfs.com/), puis cloner le dépôt. Le fichier complet fait **278 Mo**.
 
-```bash
+~~~sh
 git lfs install
-git clone https://github.com/ArilesD/database-amelie.git
+git clone https://github.com/Kajan94/database-amelie.git
 cd database-amelie
 git lfs pull
-```
+~~~
 
-Ouvre `dabase.db` dans DBeaver ou un autre client SQLite. Si tu ne disposes que d’un fichier texte de quelques lignes, vérifie le résultat de `git lfs pull` avant de l’ouvrir.
+Ouvrir ensuite `dabase.db` avec SQLite ou DB Browser for SQLite. Le ZIP de code contient le pointeur Git LFS. Le clone et `git lfs pull` donnent accès au fichier complet.
 
-Pour consulter les données via Flask et voir les graphiques, utilise le [guide de l’application web Ameli](https://github.com/ArilesD/site-amelie). L’application fournit sa propre version de la base dans son archive d’origine.
+## Requêtes à reproduire
 
-[Source des données Ameli](https://data.ameli.fr/)
+Les trois requêtes [explorer.sql](explorer.sql) s’exécutent en lecture seule avec le client SQLite.
+
+~~~sh
+sqlite3 -readonly -header -column dabase.db ".read explorer.sql"
+~~~
+
+- La table `Prescriptions` contient **390 960 lignes** couvrant **2010 à 2023**.
+- La jointure de contrôle identifie **une référence départementale sans région correspondante** dans la base complète.
+- Le classement des totaux régionaux 2023 utilise le même périmètre pour chaque ligne. Il renvoie **18 régions**, avec **7 814 970 581 €** pour l’Île-de-France.
+
+Les résultats ci-dessus correspondent au fichier versionné dans ce dépôt. [Source des données : Cnam, Data ameli](https://data.ameli.fr/)
+
+[Projet dans le portfolio](https://kajan94.github.io/#ameli)
