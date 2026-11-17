@@ -4,6 +4,10 @@ Ce dépôt présente la partie modélisation d’un projet universitaire réalis
 
 [Rapport de conception](Rapport.pdf) · [Application web d’exploration](https://github.com/Kajan94/site-amelie)
 
+## De la base à l’application
+
+Ce dépôt fournit le modèle relationnel, le rapport et des requêtes d’exploration. L’application Flask utilise un petit extrait SQLite au démarrage et peut également charger la base complète selon les instructions de son propre README.
+
 ## Ouvrir la base
 
 `dabase.db` est stockée dans Git LFS. Installer [Git LFS](https://git-lfs.com/), puis cloner le dépôt. Le fichier complet fait **278 Mo**.
@@ -31,4 +35,4 @@ sqlite3 -readonly -header -column dabase.db ".read explorer.sql"
 
 Les résultats ci-dessus correspondent au fichier versionné dans ce dépôt. [Source des données : Cnam, Data ameli](https://data.ameli.fr/)
 
-[Projet dans le portfolio](https://kajan94.github.io/#ameli)
+[Projet dans le portfolio](https://kajan94.github.io/Portefolio/#ameli)
