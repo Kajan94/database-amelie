@@ -2,7 +2,7 @@
 
 Ce dépôt présente la partie modélisation d’un projet universitaire réalisé en équipe. La base regroupe des données agrégées sur les prescriptions, les honoraires et la démographie des professions de santé, reliées à des référentiels géographiques.
 
-[Rapport de conception](Rapport.pdf) · [Application web d’exploration](https://github.com/Kajan94/site-amelie)
+[Application web d’exploration](https://github.com/Kajan94/site-amelie)
 
 ## De la base à l’application
 
