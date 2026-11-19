@@ -99,10 +99,6 @@ Chacune de ces trois tables couvre **2010 à 2023**. Les niveaux national, régi
 
 La base SQLite complète est fournie dans `dabase.db` via Git LFS. Elle contient déjà les données : aucune création de tables ni import CSV n’est nécessaire pour l’explorer.
 
-### Contrôle des données
-
-Le contrôle d’intégrité SQLite retourne `ok`. Le contrôle des clés étrangères signale toutefois une référence du fichier d’origine : le département `999`, « Tout département », est associé à la région `999`, absente de `Regions`. Cette particularité est conservée et documentée.
-
 [Source des données : Cnam, Data ameli](https://data.ameli.fr/)
 
 [Projet dans le portfolio](https://kajan94.github.io/Portefolio/#ameli)
