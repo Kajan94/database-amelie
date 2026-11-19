@@ -1,0 +1,56 @@
+name: Corriger la référence géographique Ameli
+on:
+  push:
+    branches: [main]
+    paths: [.github/workflows/repair-ameli-db.yml]
+permissions:
+  contents: write
+jobs:
+  repair:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Récupérer le dépôt et sa base complète
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          lfs: true
+      - name: Corriger la référence et vérifier la base
+        run: |
+          python - <<'PY'
+          import hashlib
+          import re
+          import sqlite3
+          from pathlib import Path
+
+          database = Path('dabase.db')
+          with database.open('rb') as source:
+              digest = hashlib.file_digest(source, 'sha256').hexdigest()
+          assert digest == '86471fb035047b7b412f416bc02f14185be8b7a537e6b988532fa6206a7cd4c1', 'La base source a changé ; intervention arrêtée.'
+          connection = sqlite3.connect(database)
+          connection.execute('PRAGMA foreign_keys = ON')
+          tables = ['Regions', 'Departements', 'ProfessionsSante', 'Prescriptions', 'Honoraires', 'Demographie']
+          counts = {table: connection.execute(f'SELECT COUNT(*) FROM {table}').fetchone()[0] for table in tables}
+          assert connection.execute('SELECT libelle_region FROM Regions WHERE Id_Region = 99').fetchone() == ('FRANCE',)
+          readme = Path('README.md')
+          text = readme.read_text()
+          queries = re.findall(r'```sql\n(.*?)```', text, re.S)
+          results = [connection.execute(query).fetchall() for query in queries]
+          assert len(queries) == 4
+          with connection:
+              change = connection.execute('UPDATE Departements SET Id_Region = 99 WHERE Num_Departement = 999 AND Id_Region = 999')
+              assert change.rowcount == 1
+          assert connection.execute('PRAGMA integrity_check').fetchall() == [('ok',)]
+          assert connection.execute('PRAGMA foreign_key_check').fetchall() == []
+          assert counts == {table: connection.execute(f'SELECT COUNT(*) FROM {table}').fetchone()[0] for table in tables}
+          assert results == [connection.execute(query).fetchall() for query in queries]
+          connection.close()
+          print('Intégrité et clés étrangères : OK. Les quatre requêtes conservent leurs résultats.')
+          PY
+      - name: Publier la base corrigée avec Git LFS
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add dabase.db
+          git commit -m "Corriger le rattachement territorial de la base"
+          git lfs push origin HEAD
+          git push origin HEAD:main
