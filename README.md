@@ -6,9 +6,9 @@ Ce projet consiste à structurer les données agrégées de l’Assurance Maladi
 
 ### Modèle relationnel
 
-[![Modèle relationnel des six tables Data Ameli](docs/modele-relationnel.svg)](docs/modele-relationnel.svg)
+[![Modèle relationnel des six tables Data Ameli](modele-relationnel.svg)](modele-relationnel.svg)
 
-Le modèle relie les référentiels géographiques et les professions de santé aux données de prescriptions, d’honoraires et de démographie. Le fichier [schema.sql](schema.sql) contient les commandes de création des six tables, avec leurs colonnes, clés primaires et clés étrangères.
+Le modèle relie les référentiels géographiques et les professions de santé aux données de prescriptions, d’honoraires et de démographie. Il présente les six tables, leurs colonnes et leurs liens.
 
 ## Tester la base en local
 
@@ -23,13 +23,69 @@ git lfs pull
 
 Ouvrir ensuite `dabase.db` dans le client SQLite. La base complète fait environ **278 Mo**. Si le fichier ne contient que quelques lignes de texte, il s’agit du pointeur Git LFS : vérifier que `git lfs pull` a bien récupéré les données.
 
-Les requêtes de [explorer.sql](explorer.sql) peuvent être ouvertes dans l’éditeur SQL du client et exécutées sur cette base. Avec le client en ligne de commande `sqlite3` :
+## Requêtes pour tester la base
+
+Dans DBeaver ou DB Browser for SQLite, ouvrir un éditeur SQL relié à `dabase.db`, puis copier et exécuter les requêtes ci-dessous. Avec le client `sqlite3`, ouvrir la base en lecture seule :
 
 ```sh
-sqlite3 -readonly -header -column dabase.db ".read explorer.sql"
+sqlite3 -readonly -header -column dabase.db
 ```
 
-Ces requêtes permettent de vérifier la période couverte, de contrôler la correspondance entre départements et régions et de comparer les montants régionaux des prescriptions en 2023. Le classement renvoie **18 régions**, dont **7 814 970 581 €** pour l’Île-de-France.
+### Voir les tables disponibles
+
+```sql
+SELECT name AS table_disponible
+FROM sqlite_master
+WHERE type = 'table'
+ORDER BY name;
+```
+
+La liste doit contenir `Regions`, `Departements`, `ProfessionsSante`, `Prescriptions`, `Honoraires` et `Demographie`.
+
+### Vérifier les années des prescriptions
+
+```sql
+SELECT MIN(Annee) AS premiere_annee,
+       MAX(Annee) AS derniere_annee
+FROM Prescriptions;
+```
+
+Résultat attendu : **2010** et **2023**.
+
+### Comparer les prescriptions par région en 2023
+
+```sql
+SELECT r.libelle_region AS region,
+       p.montant_total_prescription_integer AS montant_euros
+FROM Prescriptions AS p
+JOIN Regions AS r ON r.Id_Region = p.Id_Region
+WHERE p.Annee = 2023
+  AND p.Num_Departement = 999
+  AND p.Profession_sante = 'Ensemble des médecins'
+  AND p.poste_prescription = 'total'
+  AND r.Id_Region <> 99
+  AND typeof(p.montant_total_prescription_integer) = 'integer'
+ORDER BY montant_euros DESC;
+```
+
+Le classement présente **18 régions**, dont **7 814 970 581 €** pour l’Île-de-France. Les filtres choisissent un total régional pour un même périmètre de prescriptions.
+
+### Consulter les effectifs en Île-de-France
+
+```sql
+SELECT Profession_sante,
+       libelle_type_exercice_liberal AS mode_exercice,
+       effectif
+FROM Demographie
+WHERE Id_Region = 11
+  AND Num_Departement = 999
+  AND Annee = 2023
+  AND Profession_sante = 'Ensemble des médecins'
+  AND typeof(effectif) = 'integer'
+ORDER BY libelle_type_exercice_liberal;
+```
+
+Cette requête présente les effectifs régionaux par mode d’exercice. Les catégories peuvent se recouper ; elles ne doivent pas être additionnées sans vérifier leur périmètre.
 
 ## Conception et contenu
 
@@ -41,7 +97,7 @@ Les fichiers CSV de Data ameli ont été analysés puis intégrés dans SQLite a
 
 Chacune de ces trois tables couvre **2010 à 2023**. Les niveaux national, régional et départemental coexistent : les requêtes doivent choisir un périmètre précis pour éviter de compter plusieurs fois les mêmes agrégats.
 
-La base SQLite est fournie directement dans `dabase.db` via Git LFS. Le fichier `schema.sql` décrit la structure et n’est pas nécessaire pour ouvrir les données existantes. La source du modèle relationnel est disponible dans [docs/modele-relationnel.svg](docs/modele-relationnel.svg).
+La base SQLite complète est fournie dans `dabase.db` via Git LFS. Elle contient déjà les données : aucune création de tables ni import CSV n’est nécessaire pour l’explorer.
 
 ### Contrôle des données
 
