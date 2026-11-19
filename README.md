@@ -12,24 +12,13 @@ Le modèle relie les référentiels géographiques et les professions de santé 
 
 ## Tester la base en local
 
-Préparer **Git LFS** et un client SQLite, par exemple **DBeaver** ou **DB Browser for SQLite**.
-
-```sh
-git lfs install
-git clone https://github.com/Kajan94/database-amelie.git
-cd database-amelie
-git lfs pull
-```
-
-Ouvrir ensuite `dabase.db` dans le client SQLite. La base complète fait environ **278 Mo**. Si le fichier ne contient que quelques lignes de texte, il s’agit du pointeur Git LFS : vérifier que `git lfs pull` a bien récupéré les données.
+1. Ouvrir le fichier [dabase.db](dabase.db) sur GitHub et cliquer sur **Download raw file** pour télécharger la base complète, d’environ **278 Mo**.
+2. Dans **DBeaver**, créer une nouvelle connexion, choisir **SQLite** et sélectionner le fichier téléchargé dans le champ **Chemin / Path**.
+3. Tester la connexion, puis cliquer sur **Terminer**.
 
 ## Requêtes pour tester la base
 
-Dans DBeaver ou DB Browser for SQLite, ouvrir un éditeur SQL relié à `dabase.db`, puis copier et exécuter les requêtes ci-dessous. Avec le client `sqlite3`, ouvrir la base en lecture seule :
-
-```sh
-sqlite3 -readonly -header -column dabase.db
-```
+Dans DBeaver, ouvrir un éditeur SQL associé à cette connexion, puis copier et exécuter les requêtes ci-dessous une par une.
 
 ### Voir les tables disponibles
 
