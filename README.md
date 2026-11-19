@@ -12,13 +12,13 @@ Le modèle relie les référentiels géographiques et les professions de santé 
 
 ## Ouvrir la base 
 
-1. Ouvrir le fichier [dabase.db](dabase.db) sur GitHub pour le télécharger. La base complète fait environ **278 Mo**.
+1. Ouvrir le fichier [ameli.db](ameli.db) sur GitHub pour le télécharger. La base complète fait environ **278 Mo**.
 2. Dans DBeaver ou un autre client SQLite, créer une nouvelle connexion, choisir **SQLite** et sélectionner le fichier téléchargé dans le champ **Chemin / Path**.
 3. Tester la connexion, puis cliquer sur **Terminer**.
 
 ## Requêtes pour tester la base
 
-Dans l’outil choisi, ouvrir un éditeur SQL ou une console reliée au fichier `dabase.db`, puis copier et exécuter les requêtes ci-dessous une par une.
+Dans l’outil choisi, ouvrir un éditeur SQL ou une console reliée au fichier `ameli.db`, puis copier et exécuter les requêtes ci-dessous une par une.
 
 ### Voir les tables disponibles
 
@@ -69,7 +69,7 @@ Les fichiers CSV de Data ameli ont été analysés puis intégrés dans SQLite a
 
 Chacune de ces trois tables couvre **2010 à 2023**. Les niveaux national, régional et départemental coexistent : les requêtes doivent choisir un périmètre précis pour éviter de compter plusieurs fois les mêmes agrégats.
 
-La base SQLite complète est fournie dans `dabase.db` via Git LFS. Elle contient déjà les données : aucune création de tables ni import CSV n’est nécessaire pour l’explorer.
+La base SQLite complète est fournie dans `ameli.db` via Git LFS. Elle contient déjà les données : aucune création de tables ni import CSV n’est nécessaire pour l’explorer.
 
 [Source des données Ameli](https://data.ameli.fr/)
 
