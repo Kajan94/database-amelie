@@ -10,9 +10,9 @@ Ce projet consiste à structurer les données agrégées de l’Assurance Maladi
 
 Le modèle relie les référentiels géographiques et les professions de santé aux données de prescriptions, d’honoraires et de démographie. Il présente les six tables, leurs colonnes et leurs liens.
 
-## Tester la base en local
+## Tester la base 
 
-1. Ouvrir le fichier [dabase.db](dabase.db) sur GitHub pour le télécharger. La base complète fait d’environ **278 Mo**.
+1. Ouvrir le fichier [dabase.db](dabase.db) sur GitHub pour le télécharger. La base complète fait environ **278 Mo**.
 2. Dans DBeaver ou un autre client SQLite, créer une nouvelle connexion, choisir **SQLite** et sélectionner le fichier téléchargé dans le champ **Chemin / Path**.
 3. Tester la connexion, puis cliquer sur **Terminer**.
 
