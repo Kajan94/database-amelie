@@ -35,9 +35,9 @@ Ces requêtes permettent de vérifier la période couverte, de contrôler la cor
 
 Les fichiers CSV de Data ameli ont été analysés puis intégrés dans SQLite avec DBeaver. Trois référentiels, `Regions`, `Departements` et `ProfessionsSante`, sont reliés aux tables de données par des clés étrangères :
 
-- `Prescriptions` : **390 960 lignes**, avec les postes et montants des prescriptions.
-- `Honoraires` : **1 182 720 lignes**, avec les catégories et montants d’honoraires.
-- `Demographie` : **123 840 lignes**, avec les effectifs par profession et mode d’exercice.
+- `Prescriptions` : postes et montants des prescriptions.
+- `Honoraires` : catégories et montants d’honoraires.
+- `Demographie` : effectifs par profession et mode d’exercice.
 
 Chacune de ces trois tables couvre **2010 à 2023**. Les niveaux national, régional et départemental coexistent : les requêtes doivent choisir un périmètre précis pour éviter de compter plusieurs fois les mêmes agrégats.
 
