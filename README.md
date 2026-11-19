@@ -12,10 +12,8 @@ Le modèle relie les référentiels géographiques et les professions de santé 
 
 ## Tester la base en local
 
-Les tests peuvent être réalisés avec tout outil compatible SQLite, par exemple **DBeaver**, **DB Browser for SQLite** ou **SQLite en ligne de commande**. Les étapes ci-dessous prennent DBeaver comme exemple ; les mêmes requêtes fonctionnent dans les autres outils.
-
-1. Ouvrir le fichier [dabase.db](dabase.db) sur GitHub et cliquer sur **Download raw file** pour télécharger la base complète, d’environ **278 Mo**.
-2. Dans **DBeaver**, créer une nouvelle connexion, choisir **SQLite** et sélectionner le fichier téléchargé dans le champ **Chemin / Path**.
+1. Ouvrir le fichier [dabase.db](dabase.db) sur GitHub pour le télécharger. La base complète fait d’environ **278 Mo**.
+2. Dans DBeaver ou un autre client SQLite, créer une nouvelle connexion, choisir **SQLite** et sélectionner le fichier téléchargé dans le champ **Chemin / Path**.
 3. Tester la connexion, puis cliquer sur **Terminer**.
 
 ## Requêtes pour tester la base
