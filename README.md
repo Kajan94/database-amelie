@@ -73,4 +73,4 @@ La base SQLite complète est fournie dans `ameli.db`. Elle contient déjà les d
 
 ## Travail en équipe
 
-Projet universitaire réalisé en groupe en BUT Informatique à l’IUT de Créteil-Vitry (UPEC). J’ai assuré le rôle de chef de projet et participé à l’organisation et à la répartition du travail. L’équipe a travaillé sur l’analyse des fichiers sources, la modélisation relationnelle, l’intégration des données et les requêtes de vérification.
+Projet universitaire réalisé en groupe en **première année de BUT Informatique** à l’IUT de Créteil-Vitry (UPEC). J’ai assuré le rôle de chef de projet et participé à l’organisation et à la répartition du travail. L’équipe a travaillé sur l’analyse des fichiers sources, la modélisation relationnelle, l’intégration des données et les requêtes de vérification.
