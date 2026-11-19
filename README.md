@@ -67,12 +67,10 @@ Les fichiers CSV de Data ameli ont été analysés puis intégrés dans SQLite a
 - `Honoraires` : catégories et montants d’honoraires.
 - `Demographie` : effectifs par profession et mode d’exercice.
 
-Chacune de ces trois tables couvre **2010 à 2023**. Les niveaux national, régional et départemental coexistent : les requêtes doivent choisir un périmètre précis pour éviter de compter plusieurs fois les mêmes agrégats.
-
-La base SQLite complète est fournie dans `ameli.db` via Git LFS. Elle contient déjà les données : aucune création de tables ni import CSV n’est nécessaire pour l’explorer.
+La base SQLite complète est fournie dans `ameli.db`. Elle contient déjà les données : aucune création de tables ni import CSV n’est nécessaire pour l’explorer.
 
 [Source des données Ameli](https://data.ameli.fr/)
 
 ## Travail en équipe
 
-Projet universitaire réalisé à six en BUT Informatique à l’IUT de Créteil-Vitry (UPEC). J’ai assuré le rôle de chef de projet et participé à l’organisation et à la répartition du travail. L’équipe a travaillé sur l’analyse des fichiers sources, la modélisation relationnelle, l’intégration des données et les requêtes de vérification.
+Projet universitaire réalisé en groupe en BUT Informatique à l’IUT de Créteil-Vitry (UPEC). J’ai assuré le rôle de chef de projet et participé à l’organisation et à la répartition du travail. L’équipe a travaillé sur l’analyse des fichiers sources, la modélisation relationnelle, l’intégration des données et les requêtes de vérification.
