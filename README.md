@@ -99,9 +99,7 @@ Chacune de ces trois tables couvre **2010 à 2023**. Les niveaux national, régi
 
 La base SQLite complète est fournie dans `dabase.db` via Git LFS. Elle contient déjà les données : aucune création de tables ni import CSV n’est nécessaire pour l’explorer.
 
-[Source des données : Cnam, Data ameli](https://data.ameli.fr/)
-
-[Projet dans le portfolio](https://kajan94.github.io/Portefolio/#ameli)
+[Source des données Ameli](https://data.ameli.fr/)
 
 ## Travail en équipe
 
