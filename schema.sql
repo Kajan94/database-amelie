@@ -1,4 +1,4 @@
--- Structure extraite de dabase.db, sans les données.
+-- Structure SQLite du projet Data Ameli, sans les données.
 -- À exécuter dans une nouvelle base SQLite vide.
 PRAGMA foreign_keys = ON;
 
@@ -30,6 +30,7 @@ CREATE TABLE Demographie (
 	type_exercice_liberal INTEGER NOT NULL,
 	libelle_type_exercice_liberal VARCHAR NOT NULL,
 	effectif INTEGER NOT NULL,
+	vision_generale_all VARCHAR NOT NULL,
 	CONSTRAINT Id_Demographie PRIMARY KEY (Id_Demographie),
 	CONSTRAINT Demographie_Departements_FK FOREIGN KEY (Num_Departement) REFERENCES Departements(Num_Departement),
 	CONSTRAINT Demographie_ProfessionsSante_FK FOREIGN KEY (Profession_sante) REFERENCES ProfessionsSante(Profession_sante),
@@ -50,6 +51,7 @@ CREATE TABLE Honoraires (
 	type_honoraires_niveau_3 VARCHAR,
 	Montant_honoraires REAL,
 	Montant_honoraires_moyen REAL,
+	vision_honoraires_remunerations_niveau_2 VARCHAR NOT NULL,
 	CONSTRAINT Id_Honoraires PRIMARY KEY (Id_Honoraire),
 	CONSTRAINT Honoraires_Departements_FK FOREIGN KEY (Num_Departement) REFERENCES Departements(Num_Departement),
 	CONSTRAINT Honoraires_ProfessionsSante_FK FOREIGN KEY (Profession_sante) REFERENCES ProfessionsSante(Profession_sante),

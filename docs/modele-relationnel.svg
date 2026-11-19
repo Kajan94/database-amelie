@@ -2,7 +2,7 @@
 <rect width="2500" height="1450" fill="white"/>
 <style>text{font-family:Arial, sans-serif;fill:#16364D}.field{font-family:DejaVu Sans Mono,monospace;font-size:20px}.type{font-size:20px}.key{font-size:18px;font-weight:bold}</style>
 <text font-family="Helvetica" x="1250" y="62" text-anchor="middle" font-size="36" font-weight="bold">Data Ameli · Modèle relationnel</text>
-<text font-family="Helvetica" x="1250" y="105" text-anchor="middle" font-size="22">Version étendue · Deux champs supplémentaires surlignés · PK : clé primaire · FK : clé étrangère</text>
+<text font-family="Helvetica" x="1250" y="105" text-anchor="middle" font-size="22">PK : clé primaire · FK : clé étrangère</text>
 <path d="M280.0,360 V405 H274.0 V650" fill="none" stroke="#8295A3" stroke-width="2.2"/>
 <path d="M400.0,360 V429 H1123.0 V650" fill="none" stroke="#8295A3" stroke-width="2.2"/>
 <path d="M520.0,360 V453 H1991.0 V650" fill="none" stroke="#8295A3" stroke-width="2.2"/>
@@ -148,7 +148,7 @@
 <line x1="908" y1="1232" x2="908" y2="1276" stroke="#B8C7D1"/>
 <line x1="1642" y1="1232" x2="1642" y2="1276" stroke="#B8C7D1"/>
 <text font-family="Helvetica" font-size="18" font-weight="bold" x="862" y="1261"></text><text font-family="Helvetica" font-size="20" x="922" y="1261">Montant_honoraires_moyen</text><text font-family="Helvetica" font-size="20" x="1654" y="1261">REAL</text>
-<rect x="851" y="1276" width="908" height="44" fill="#DBF4ED"/>
+<rect x="851" y="1276" width="908" height="44" fill="#FFFFFF"/>
 <line x1="850" y1="1276" x2="1760" y2="1276" stroke="#B8C7D1"/>
 <line x1="908" y1="1276" x2="908" y2="1320" stroke="#B8C7D1"/>
 <line x1="1642" y1="1276" x2="1642" y2="1320" stroke="#B8C7D1"/>
@@ -188,7 +188,7 @@
 <line x1="1848" y1="1012" x2="1848" y2="1056" stroke="#B8C7D1"/>
 <line x1="2342" y1="1012" x2="2342" y2="1056" stroke="#B8C7D1"/>
 <text font-family="Helvetica" font-size="18" font-weight="bold" x="1802" y="1041"></text><text font-family="Helvetica" font-size="20" x="1862" y="1041">effectif</text><text font-family="Helvetica" font-size="20" x="2354" y="1041">INTEGER</text>
-<rect x="1791" y="1056" width="668" height="44" fill="#DBF4ED"/>
+<rect x="1791" y="1056" width="668" height="44" fill="#FFFFFF"/>
 <line x1="1790" y1="1056" x2="2460" y2="1056" stroke="#B8C7D1"/>
 <line x1="1848" y1="1056" x2="1848" y2="1100" stroke="#B8C7D1"/>
 <line x1="2342" y1="1056" x2="2342" y2="1100" stroke="#B8C7D1"/>

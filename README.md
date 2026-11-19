@@ -6,11 +6,9 @@ Ce projet consiste à structurer les données agrégées de l’Assurance Maladi
 
 ### Modèle relationnel
 
-[![Modèle relationnel des six tables Data Ameli avec les deux champs de classification supplémentaires surlignés](docs/modele-relationnel.svg)](docs/modele-relationnel.svg)
+[![Modèle relationnel des six tables Data Ameli](docs/modele-relationnel.svg)](docs/modele-relationnel.svg)
 
-Modèle de la version étendue, avec les noms de colonnes réellement utilisés. Les deux champs surlignés sont `vision_generale_all` dans `Demographie` et `vision_honoraires_remunerations_niveau_2` dans `Honoraires` ; ils prennent les valeurs `oui` ou `non`.
-
-Le fichier `dabase.db` conserve la version de conception, sans ces deux champs. [schema.sql](schema.sql) décrit sa structure exacte ; [schema-version-etendue.sql](schema-version-etendue.sql) décrit la version représentée ci-dessus. Les six tables et les données communes sont identiques entre les deux versions.
+Le modèle relie les référentiels géographiques et les professions de santé aux données de prescriptions, d’honoraires et de démographie. Le fichier [schema.sql](schema.sql) contient les commandes de création des six tables, avec leurs colonnes, clés primaires et clés étrangères.
 
 ## Tester la base en local
 
@@ -43,7 +41,7 @@ Les fichiers CSV de Data ameli ont été analysés puis intégrés dans SQLite a
 
 Chacune de ces trois tables couvre **2010 à 2023**. Les niveaux national, régional et départemental coexistent : les requêtes doivent choisir un périmètre précis pour éviter de compter plusieurs fois les mêmes agrégats.
 
-La base SQLite est fournie directement dans `dabase.db` via Git LFS. Les fichiers SQL décrivent uniquement la structure et ne sont pas nécessaires pour ouvrir les données existantes. La source du modèle relationnel est disponible dans [docs/modele-relationnel.svg](docs/modele-relationnel.svg).
+La base SQLite est fournie directement dans `dabase.db` via Git LFS. Le fichier `schema.sql` décrit la structure et n’est pas nécessaire pour ouvrir les données existantes. La source du modèle relationnel est disponible dans [docs/modele-relationnel.svg](docs/modele-relationnel.svg).
 
 ### Contrôle des données
 
