@@ -70,23 +70,6 @@ ORDER BY montant_euros DESC;
 
 Le classement présente **18 régions**, dont **7 814 970 581 €** pour l’Île-de-France. Les filtres choisissent un total régional pour un même périmètre de prescriptions.
 
-### Consulter les effectifs en Île-de-France
-
-```sql
-SELECT Profession_sante,
-       libelle_type_exercice_liberal AS mode_exercice,
-       effectif
-FROM Demographie
-WHERE Id_Region = 11
-  AND Num_Departement = 999
-  AND Annee = 2023
-  AND Profession_sante = 'Ensemble des médecins'
-  AND typeof(effectif) = 'integer'
-ORDER BY libelle_type_exercice_liberal;
-```
-
-Cette requête présente les effectifs régionaux par mode d’exercice. Les catégories peuvent se recouper ; elles ne doivent pas être additionnées sans vérifier leur périmètre.
-
 ## Conception et contenu
 
 Les fichiers CSV de Data ameli ont été analysés puis intégrés dans SQLite avec DBeaver. Trois référentiels, `Regions`, `Departements` et `ProfessionsSante`, sont reliés aux tables de données par des clés étrangères :
