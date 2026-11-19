@@ -1,0 +1,196 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2500" height="1450" viewBox="0 0 2500 1450">
+<rect width="2500" height="1450" fill="white"/>
+<style>text{font-family:Arial, sans-serif;fill:#16364D}.field{font-family:DejaVu Sans Mono,monospace;font-size:20px}.type{font-size:20px}.key{font-size:18px;font-weight:bold}</style>
+<text font-family="Helvetica" x="1250" y="62" text-anchor="middle" font-size="36" font-weight="bold">Data Ameli · Modèle relationnel</text>
+<text font-family="Helvetica" x="1250" y="105" text-anchor="middle" font-size="22">Version étendue · Deux champs supplémentaires surlignés · PK : clé primaire · FK : clé étrangère</text>
+<path d="M280.0,360 V405 H274.0 V650" fill="none" stroke="#8295A3" stroke-width="2.2"/>
+<path d="M400.0,360 V429 H1123.0 V650" fill="none" stroke="#8295A3" stroke-width="2.2"/>
+<path d="M520.0,360 V453 H1991.0 V650" fill="none" stroke="#8295A3" stroke-width="2.2"/>
+<path d="M1130.0,360 V477 H430.0 V650" fill="none" stroke="#8295A3" stroke-width="2.2"/>
+<path d="M1250.0,360 V501 H1305.0 V650" fill="none" stroke="#8295A3" stroke-width="2.2"/>
+<path d="M1370.0,360 V525 H2125.0 V650" fill="none" stroke="#8295A3" stroke-width="2.2"/>
+<path d="M1980.0,360 V549 H586.0 V650" fill="none" stroke="#8295A3" stroke-width="2.2"/>
+<path d="M2100.0,360 V573 H1487.0 V650" fill="none" stroke="#8295A3" stroke-width="2.2"/>
+<path d="M2220.0,360 V597 H2259.0 V650" fill="none" stroke="#8295A3" stroke-width="2.2"/>
+<path d="M400,218 V145 H1250 V174" fill="none" stroke="#8295A3" stroke-width="2.2"/>
+<rect x="100" y="218" width="600" height="142" fill="white" stroke="#B8C7D1" stroke-width="2"/>
+<rect x="100" y="218" width="600" height="54" fill="#16364D"/>
+<text font-family="Helvetica" x="400.0" y="253" text-anchor="middle" font-size="26" font-weight="bold" style="fill:white">Regions</text>
+<line x1="100" y1="272" x2="700" y2="272" stroke="#B8C7D1"/>
+<line x1="158" y1="272" x2="158" y2="316" stroke="#B8C7D1"/>
+<line x1="582" y1="272" x2="582" y2="316" stroke="#B8C7D1"/>
+<text font-family="Helvetica" font-size="18" font-weight="bold" x="112" y="301">PK</text><text font-family="Helvetica" font-size="20" x="172" y="301">Id_Region</text><text font-family="Helvetica" font-size="20" x="594" y="301">INTEGER</text>
+<line x1="100" y1="316" x2="700" y2="316" stroke="#B8C7D1"/>
+<line x1="158" y1="316" x2="158" y2="360" stroke="#B8C7D1"/>
+<line x1="582" y1="316" x2="582" y2="360" stroke="#B8C7D1"/>
+<text font-family="Helvetica" font-size="18" font-weight="bold" x="112" y="345"></text><text font-family="Helvetica" font-size="20" x="172" y="345">libelle_region</text><text font-family="Helvetica" font-size="20" x="594" y="345">TEXT</text>
+<rect x="950" y="174" width="600" height="186" fill="white" stroke="#B8C7D1" stroke-width="2"/>
+<rect x="950" y="174" width="600" height="54" fill="#16364D"/>
+<text font-family="Helvetica" x="1250.0" y="209" text-anchor="middle" font-size="26" font-weight="bold" style="fill:white">Departements</text>
+<line x1="950" y1="228" x2="1550" y2="228" stroke="#B8C7D1"/>
+<line x1="1008" y1="228" x2="1008" y2="272" stroke="#B8C7D1"/>
+<line x1="1432" y1="228" x2="1432" y2="272" stroke="#B8C7D1"/>
+<text font-family="Helvetica" font-size="18" font-weight="bold" x="962" y="257">PK</text><text font-family="Helvetica" font-size="20" x="1022" y="257">Num_Departement</text><text font-family="Helvetica" font-size="20" x="1444" y="257">ANY</text>
+<line x1="950" y1="272" x2="1550" y2="272" stroke="#B8C7D1"/>
+<line x1="1008" y1="272" x2="1008" y2="316" stroke="#B8C7D1"/>
+<line x1="1432" y1="272" x2="1432" y2="316" stroke="#B8C7D1"/>
+<text font-family="Helvetica" font-size="18" font-weight="bold" x="962" y="301">FK</text><text font-family="Helvetica" font-size="20" x="1022" y="301">Id_Region</text><text font-family="Helvetica" font-size="20" x="1444" y="301">INTEGER</text>
+<line x1="950" y1="316" x2="1550" y2="316" stroke="#B8C7D1"/>
+<line x1="1008" y1="316" x2="1008" y2="360" stroke="#B8C7D1"/>
+<line x1="1432" y1="316" x2="1432" y2="360" stroke="#B8C7D1"/>
+<text font-family="Helvetica" font-size="18" font-weight="bold" x="962" y="345"></text><text font-family="Helvetica" font-size="20" x="1022" y="345">libelle_departement</text><text font-family="Helvetica" font-size="20" x="1444" y="345">TEXT</text>
+<rect x="1800" y="262" width="600" height="98" fill="white" stroke="#B8C7D1" stroke-width="2"/>
+<rect x="1800" y="262" width="600" height="54" fill="#16364D"/>
+<text font-family="Helvetica" x="2100.0" y="297" text-anchor="middle" font-size="26" font-weight="bold" style="fill:white">ProfessionsSante</text>
+<line x1="1800" y1="316" x2="2400" y2="316" stroke="#B8C7D1"/>
+<line x1="1858" y1="316" x2="1858" y2="360" stroke="#B8C7D1"/>
+<line x1="2282" y1="316" x2="2282" y2="360" stroke="#B8C7D1"/>
+<text font-family="Helvetica" font-size="18" font-weight="bold" x="1812" y="345">PK</text><text font-family="Helvetica" font-size="20" x="1872" y="345">Profession_sante</text><text font-family="Helvetica" font-size="20" x="2294" y="345">TEXT</text>
+<rect x="40" y="650" width="780" height="538" fill="white" stroke="#B8C7D1" stroke-width="2"/>
+<rect x="40" y="650" width="780" height="54" fill="#16364D"/>
+<text font-family="Helvetica" x="430.0" y="685" text-anchor="middle" font-size="26" font-weight="bold" style="fill:white">Prescriptions</text>
+<line x1="40" y1="704" x2="820" y2="704" stroke="#B8C7D1"/>
+<line x1="98" y1="704" x2="98" y2="748" stroke="#B8C7D1"/>
+<line x1="702" y1="704" x2="702" y2="748" stroke="#B8C7D1"/>
+<text font-family="Helvetica" font-size="18" font-weight="bold" x="52" y="733">PK</text><text font-family="Helvetica" font-size="20" x="112" y="733">Id_Prescription</text><text font-family="Helvetica" font-size="20" x="714" y="733">INTEGER</text>
+<line x1="40" y1="748" x2="820" y2="748" stroke="#B8C7D1"/>
+<line x1="98" y1="748" x2="98" y2="792" stroke="#B8C7D1"/>
+<line x1="702" y1="748" x2="702" y2="792" stroke="#B8C7D1"/>
+<text font-family="Helvetica" font-size="18" font-weight="bold" x="52" y="777"></text><text font-family="Helvetica" font-size="20" x="112" y="777">Annee</text><text font-family="Helvetica" font-size="20" x="714" y="777">INTEGER</text>
+<line x1="40" y1="792" x2="820" y2="792" stroke="#B8C7D1"/>
+<line x1="98" y1="792" x2="98" y2="836" stroke="#B8C7D1"/>
+<line x1="702" y1="792" x2="702" y2="836" stroke="#B8C7D1"/>
+<text font-family="Helvetica" font-size="18" font-weight="bold" x="52" y="821">FK</text><text font-family="Helvetica" font-size="20" x="112" y="821">Profession_sante</text><text font-family="Helvetica" font-size="20" x="714" y="821">TEXT</text>
+<line x1="40" y1="836" x2="820" y2="836" stroke="#B8C7D1"/>
+<line x1="98" y1="836" x2="98" y2="880" stroke="#B8C7D1"/>
+<line x1="702" y1="836" x2="702" y2="880" stroke="#B8C7D1"/>
+<text font-family="Helvetica" font-size="18" font-weight="bold" x="52" y="865">FK</text><text font-family="Helvetica" font-size="20" x="112" y="865">Num_Departement</text><text font-family="Helvetica" font-size="20" x="714" y="865">ANY</text>
+<line x1="40" y1="880" x2="820" y2="880" stroke="#B8C7D1"/>
+<line x1="98" y1="880" x2="98" y2="924" stroke="#B8C7D1"/>
+<line x1="702" y1="880" x2="702" y2="924" stroke="#B8C7D1"/>
+<text font-family="Helvetica" font-size="18" font-weight="bold" x="52" y="909"></text><text font-family="Helvetica" font-size="20" x="112" y="909">libelle_poste_prescription</text><text font-family="Helvetica" font-size="20" x="714" y="909">TEXT</text>
+<line x1="40" y1="924" x2="820" y2="924" stroke="#B8C7D1"/>
+<line x1="98" y1="924" x2="98" y2="968" stroke="#B8C7D1"/>
+<line x1="702" y1="924" x2="702" y2="968" stroke="#B8C7D1"/>
+<text font-family="Helvetica" font-size="18" font-weight="bold" x="52" y="953"></text><text font-family="Helvetica" font-size="20" x="112" y="953">poste_prescription</text><text font-family="Helvetica" font-size="20" x="714" y="953">ANY</text>
+<line x1="40" y1="968" x2="820" y2="968" stroke="#B8C7D1"/>
+<line x1="98" y1="968" x2="98" y2="1012" stroke="#B8C7D1"/>
+<line x1="702" y1="968" x2="702" y2="1012" stroke="#B8C7D1"/>
+<text font-family="Helvetica" font-size="18" font-weight="bold" x="52" y="997"></text><text font-family="Helvetica" font-size="20" x="112" y="997">montant_moyen_prescription</text><text font-family="Helvetica" font-size="20" x="714" y="997">ANY</text>
+<line x1="40" y1="1012" x2="820" y2="1012" stroke="#B8C7D1"/>
+<line x1="98" y1="1012" x2="98" y2="1056" stroke="#B8C7D1"/>
+<line x1="702" y1="1012" x2="702" y2="1056" stroke="#B8C7D1"/>
+<text font-family="Helvetica" font-size="18" font-weight="bold" x="52" y="1041"></text><text font-family="Helvetica" font-size="20" x="112" y="1041">montant_total_prescription</text><text font-family="Helvetica" font-size="20" x="714" y="1041">ANY</text>
+<line x1="40" y1="1056" x2="820" y2="1056" stroke="#B8C7D1"/>
+<line x1="98" y1="1056" x2="98" y2="1100" stroke="#B8C7D1"/>
+<line x1="702" y1="1056" x2="702" y2="1100" stroke="#B8C7D1"/>
+<text font-family="Helvetica" font-size="18" font-weight="bold" x="52" y="1085"></text><text font-family="Helvetica" font-size="20" x="112" y="1085">montant_moyen_prescription_integer</text><text font-family="Helvetica" font-size="20" x="714" y="1085">INTEGER</text>
+<line x1="40" y1="1100" x2="820" y2="1100" stroke="#B8C7D1"/>
+<line x1="98" y1="1100" x2="98" y2="1144" stroke="#B8C7D1"/>
+<line x1="702" y1="1100" x2="702" y2="1144" stroke="#B8C7D1"/>
+<text font-family="Helvetica" font-size="18" font-weight="bold" x="52" y="1129"></text><text font-family="Helvetica" font-size="20" x="112" y="1129">montant_total_prescription_integer</text><text font-family="Helvetica" font-size="20" x="714" y="1129">INTEGER</text>
+<line x1="40" y1="1144" x2="820" y2="1144" stroke="#B8C7D1"/>
+<line x1="98" y1="1144" x2="98" y2="1188" stroke="#B8C7D1"/>
+<line x1="702" y1="1144" x2="702" y2="1188" stroke="#B8C7D1"/>
+<text font-family="Helvetica" font-size="18" font-weight="bold" x="52" y="1173">FK</text><text font-family="Helvetica" font-size="20" x="112" y="1173">Id_Region</text><text font-family="Helvetica" font-size="20" x="714" y="1173">INT</text>
+<rect x="850" y="650" width="910" height="670" fill="white" stroke="#B8C7D1" stroke-width="2"/>
+<rect x="850" y="650" width="910" height="54" fill="#16364D"/>
+<text font-family="Helvetica" x="1305.0" y="685" text-anchor="middle" font-size="26" font-weight="bold" style="fill:white">Honoraires</text>
+<line x1="850" y1="704" x2="1760" y2="704" stroke="#B8C7D1"/>
+<line x1="908" y1="704" x2="908" y2="748" stroke="#B8C7D1"/>
+<line x1="1642" y1="704" x2="1642" y2="748" stroke="#B8C7D1"/>
+<text font-family="Helvetica" font-size="18" font-weight="bold" x="862" y="733">PK</text><text font-family="Helvetica" font-size="20" x="922" y="733">Id_Honoraire</text><text font-family="Helvetica" font-size="20" x="1654" y="733">INTEGER</text>
+<line x1="850" y1="748" x2="1760" y2="748" stroke="#B8C7D1"/>
+<line x1="908" y1="748" x2="908" y2="792" stroke="#B8C7D1"/>
+<line x1="1642" y1="748" x2="1642" y2="792" stroke="#B8C7D1"/>
+<text font-family="Helvetica" font-size="18" font-weight="bold" x="862" y="777"></text><text font-family="Helvetica" font-size="20" x="922" y="777">Annee</text><text font-family="Helvetica" font-size="20" x="1654" y="777">INTEGER</text>
+<line x1="850" y1="792" x2="1760" y2="792" stroke="#B8C7D1"/>
+<line x1="908" y1="792" x2="908" y2="836" stroke="#B8C7D1"/>
+<line x1="1642" y1="792" x2="1642" y2="836" stroke="#B8C7D1"/>
+<text font-family="Helvetica" font-size="18" font-weight="bold" x="862" y="821">FK</text><text font-family="Helvetica" font-size="20" x="922" y="821">Profession_sante</text><text font-family="Helvetica" font-size="20" x="1654" y="821">TEXT</text>
+<line x1="850" y1="836" x2="1760" y2="836" stroke="#B8C7D1"/>
+<line x1="908" y1="836" x2="908" y2="880" stroke="#B8C7D1"/>
+<line x1="1642" y1="836" x2="1642" y2="880" stroke="#B8C7D1"/>
+<text font-family="Helvetica" font-size="18" font-weight="bold" x="862" y="865">FK</text><text font-family="Helvetica" font-size="20" x="922" y="865">Id_Region</text><text font-family="Helvetica" font-size="20" x="1654" y="865">INTEGER</text>
+<line x1="850" y1="880" x2="1760" y2="880" stroke="#B8C7D1"/>
+<line x1="908" y1="880" x2="908" y2="924" stroke="#B8C7D1"/>
+<line x1="1642" y1="880" x2="1642" y2="924" stroke="#B8C7D1"/>
+<text font-family="Helvetica" font-size="18" font-weight="bold" x="862" y="909">FK</text><text font-family="Helvetica" font-size="20" x="922" y="909">Num_Departement</text><text font-family="Helvetica" font-size="20" x="1654" y="909">ANY</text>
+<line x1="850" y1="924" x2="1760" y2="924" stroke="#B8C7D1"/>
+<line x1="908" y1="924" x2="908" y2="968" stroke="#B8C7D1"/>
+<line x1="1642" y1="924" x2="1642" y2="968" stroke="#B8C7D1"/>
+<text font-family="Helvetica" font-size="18" font-weight="bold" x="862" y="953"></text><text font-family="Helvetica" font-size="20" x="922" y="953">Honoraires_ordre_niv_1</text><text font-family="Helvetica" font-size="20" x="1654" y="953">INTEGER</text>
+<line x1="850" y1="968" x2="1760" y2="968" stroke="#B8C7D1"/>
+<line x1="908" y1="968" x2="908" y2="1012" stroke="#B8C7D1"/>
+<line x1="1642" y1="968" x2="1642" y2="1012" stroke="#B8C7D1"/>
+<text font-family="Helvetica" font-size="18" font-weight="bold" x="862" y="997"></text><text font-family="Helvetica" font-size="20" x="922" y="997">type_honoraires_niveau_1</text><text font-family="Helvetica" font-size="20" x="1654" y="997">VARCHAR</text>
+<line x1="850" y1="1012" x2="1760" y2="1012" stroke="#B8C7D1"/>
+<line x1="908" y1="1012" x2="908" y2="1056" stroke="#B8C7D1"/>
+<line x1="1642" y1="1012" x2="1642" y2="1056" stroke="#B8C7D1"/>
+<text font-family="Helvetica" font-size="18" font-weight="bold" x="862" y="1041"></text><text font-family="Helvetica" font-size="20" x="922" y="1041">Honoraires_ordre_niv_2</text><text font-family="Helvetica" font-size="20" x="1654" y="1041">INTEGER</text>
+<line x1="850" y1="1056" x2="1760" y2="1056" stroke="#B8C7D1"/>
+<line x1="908" y1="1056" x2="908" y2="1100" stroke="#B8C7D1"/>
+<line x1="1642" y1="1056" x2="1642" y2="1100" stroke="#B8C7D1"/>
+<text font-family="Helvetica" font-size="18" font-weight="bold" x="862" y="1085"></text><text font-family="Helvetica" font-size="20" x="922" y="1085">type_honoraires_niveau_2</text><text font-family="Helvetica" font-size="20" x="1654" y="1085">VARCHAR</text>
+<line x1="850" y1="1100" x2="1760" y2="1100" stroke="#B8C7D1"/>
+<line x1="908" y1="1100" x2="908" y2="1144" stroke="#B8C7D1"/>
+<line x1="1642" y1="1100" x2="1642" y2="1144" stroke="#B8C7D1"/>
+<text font-family="Helvetica" font-size="18" font-weight="bold" x="862" y="1129"></text><text font-family="Helvetica" font-size="20" x="922" y="1129">Honoraires_ordre_niv_3</text><text font-family="Helvetica" font-size="20" x="1654" y="1129">INTEGER</text>
+<line x1="850" y1="1144" x2="1760" y2="1144" stroke="#B8C7D1"/>
+<line x1="908" y1="1144" x2="908" y2="1188" stroke="#B8C7D1"/>
+<line x1="1642" y1="1144" x2="1642" y2="1188" stroke="#B8C7D1"/>
+<text font-family="Helvetica" font-size="18" font-weight="bold" x="862" y="1173"></text><text font-family="Helvetica" font-size="20" x="922" y="1173">type_honoraires_niveau_3</text><text font-family="Helvetica" font-size="20" x="1654" y="1173">VARCHAR</text>
+<line x1="850" y1="1188" x2="1760" y2="1188" stroke="#B8C7D1"/>
+<line x1="908" y1="1188" x2="908" y2="1232" stroke="#B8C7D1"/>
+<line x1="1642" y1="1188" x2="1642" y2="1232" stroke="#B8C7D1"/>
+<text font-family="Helvetica" font-size="18" font-weight="bold" x="862" y="1217"></text><text font-family="Helvetica" font-size="20" x="922" y="1217">Montant_honoraires</text><text font-family="Helvetica" font-size="20" x="1654" y="1217">REAL</text>
+<line x1="850" y1="1232" x2="1760" y2="1232" stroke="#B8C7D1"/>
+<line x1="908" y1="1232" x2="908" y2="1276" stroke="#B8C7D1"/>
+<line x1="1642" y1="1232" x2="1642" y2="1276" stroke="#B8C7D1"/>
+<text font-family="Helvetica" font-size="18" font-weight="bold" x="862" y="1261"></text><text font-family="Helvetica" font-size="20" x="922" y="1261">Montant_honoraires_moyen</text><text font-family="Helvetica" font-size="20" x="1654" y="1261">REAL</text>
+<rect x="851" y="1276" width="908" height="44" fill="#DBF4ED"/>
+<line x1="850" y1="1276" x2="1760" y2="1276" stroke="#B8C7D1"/>
+<line x1="908" y1="1276" x2="908" y2="1320" stroke="#B8C7D1"/>
+<line x1="1642" y1="1276" x2="1642" y2="1320" stroke="#B8C7D1"/>
+<text font-family="Helvetica" font-size="18" font-weight="bold" x="862" y="1305"></text><text font-family="Helvetica" font-size="20" x="922" y="1305">vision_honoraires_remunerations_niveau_2</text><text font-family="Helvetica" font-size="20" x="1654" y="1305">VARCHAR</text>
+<rect x="1790" y="650" width="670" height="450" fill="white" stroke="#B8C7D1" stroke-width="2"/>
+<rect x="1790" y="650" width="670" height="54" fill="#16364D"/>
+<text font-family="Helvetica" x="2125.0" y="685" text-anchor="middle" font-size="26" font-weight="bold" style="fill:white">Demographie</text>
+<line x1="1790" y1="704" x2="2460" y2="704" stroke="#B8C7D1"/>
+<line x1="1848" y1="704" x2="1848" y2="748" stroke="#B8C7D1"/>
+<line x1="2342" y1="704" x2="2342" y2="748" stroke="#B8C7D1"/>
+<text font-family="Helvetica" font-size="18" font-weight="bold" x="1802" y="733">PK</text><text font-family="Helvetica" font-size="20" x="1862" y="733">Id_Demographie</text><text font-family="Helvetica" font-size="20" x="2354" y="733">INTEGER</text>
+<line x1="1790" y1="748" x2="2460" y2="748" stroke="#B8C7D1"/>
+<line x1="1848" y1="748" x2="1848" y2="792" stroke="#B8C7D1"/>
+<line x1="2342" y1="748" x2="2342" y2="792" stroke="#B8C7D1"/>
+<text font-family="Helvetica" font-size="18" font-weight="bold" x="1802" y="777"></text><text font-family="Helvetica" font-size="20" x="1862" y="777">Annee</text><text font-family="Helvetica" font-size="20" x="2354" y="777">INTEGER</text>
+<line x1="1790" y1="792" x2="2460" y2="792" stroke="#B8C7D1"/>
+<line x1="1848" y1="792" x2="1848" y2="836" stroke="#B8C7D1"/>
+<line x1="2342" y1="792" x2="2342" y2="836" stroke="#B8C7D1"/>
+<text font-family="Helvetica" font-size="18" font-weight="bold" x="1802" y="821">FK</text><text font-family="Helvetica" font-size="20" x="1862" y="821">Id_Region</text><text font-family="Helvetica" font-size="20" x="2354" y="821">INTEGER</text>
+<line x1="1790" y1="836" x2="2460" y2="836" stroke="#B8C7D1"/>
+<line x1="1848" y1="836" x2="1848" y2="880" stroke="#B8C7D1"/>
+<line x1="2342" y1="836" x2="2342" y2="880" stroke="#B8C7D1"/>
+<text font-family="Helvetica" font-size="18" font-weight="bold" x="1802" y="865">FK</text><text font-family="Helvetica" font-size="20" x="1862" y="865">Num_Departement</text><text font-family="Helvetica" font-size="20" x="2354" y="865">ANY</text>
+<line x1="1790" y1="880" x2="2460" y2="880" stroke="#B8C7D1"/>
+<line x1="1848" y1="880" x2="1848" y2="924" stroke="#B8C7D1"/>
+<line x1="2342" y1="880" x2="2342" y2="924" stroke="#B8C7D1"/>
+<text font-family="Helvetica" font-size="18" font-weight="bold" x="1802" y="909">FK</text><text font-family="Helvetica" font-size="20" x="1862" y="909">Profession_sante</text><text font-family="Helvetica" font-size="20" x="2354" y="909">TEXT</text>
+<line x1="1790" y1="924" x2="2460" y2="924" stroke="#B8C7D1"/>
+<line x1="1848" y1="924" x2="1848" y2="968" stroke="#B8C7D1"/>
+<line x1="2342" y1="924" x2="2342" y2="968" stroke="#B8C7D1"/>
+<text font-family="Helvetica" font-size="18" font-weight="bold" x="1802" y="953"></text><text font-family="Helvetica" font-size="20" x="1862" y="953">type_exercice_liberal</text><text font-family="Helvetica" font-size="20" x="2354" y="953">INTEGER</text>
+<line x1="1790" y1="968" x2="2460" y2="968" stroke="#B8C7D1"/>
+<line x1="1848" y1="968" x2="1848" y2="1012" stroke="#B8C7D1"/>
+<line x1="2342" y1="968" x2="2342" y2="1012" stroke="#B8C7D1"/>
+<text font-family="Helvetica" font-size="18" font-weight="bold" x="1802" y="997"></text><text font-family="Helvetica" font-size="20" x="1862" y="997">libelle_type_exercice_liberal</text><text font-family="Helvetica" font-size="20" x="2354" y="997">VARCHAR</text>
+<line x1="1790" y1="1012" x2="2460" y2="1012" stroke="#B8C7D1"/>
+<line x1="1848" y1="1012" x2="1848" y2="1056" stroke="#B8C7D1"/>
+<line x1="2342" y1="1012" x2="2342" y2="1056" stroke="#B8C7D1"/>
+<text font-family="Helvetica" font-size="18" font-weight="bold" x="1802" y="1041"></text><text font-family="Helvetica" font-size="20" x="1862" y="1041">effectif</text><text font-family="Helvetica" font-size="20" x="2354" y="1041">INTEGER</text>
+<rect x="1791" y="1056" width="668" height="44" fill="#DBF4ED"/>
+<line x1="1790" y1="1056" x2="2460" y2="1056" stroke="#B8C7D1"/>
+<line x1="1848" y1="1056" x2="1848" y2="1100" stroke="#B8C7D1"/>
+<line x1="2342" y1="1056" x2="2342" y2="1100" stroke="#B8C7D1"/>
+<text font-family="Helvetica" font-size="18" font-weight="bold" x="1802" y="1085"></text><text font-family="Helvetica" font-size="20" x="1862" y="1085">vision_generale_all</text><text font-family="Helvetica" font-size="20" x="2354" y="1085">VARCHAR</text>
+</svg>
