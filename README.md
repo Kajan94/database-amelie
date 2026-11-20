@@ -2,6 +2,8 @@
 
 Ce projet consiste à structurer les données agrégées de l’Assurance Maladie dans une base relationnelle SQLite. Il rassemble les prescriptions, les honoraires et la démographie des professions de santé afin de les analyser par profession, territoire et année, sur la période **2010 à 2023**.
 
+Pour explorer ces données dans une application web avec une carte, des tableaux et des graphiques, consulter le dépôt [site-amelie](https://github.com/Kajan94/site-amelie).
+
 ## Aperçu de la base
 
 ### Modèle relationnel
