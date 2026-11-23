@@ -61,6 +61,13 @@ ORDER BY montant_euros DESC;
 
 Le classement présente **18 régions**, dont **7 814 970 581 €** pour l’Île-de-France. Les filtres choisissent un total régional pour un même périmètre de prescriptions.
 
+## Organisation du dépôt
+
+| Chemin | Rôle |
+| --- | --- |
+| `ameli.db` | Base SQLite complète, contenant les référentiels et les données de santé. |
+| `modele-relationnel.svg` | Schéma des six tables, de leurs colonnes et de leurs relations. |
+
 ## Conception et contenu
 
 Les fichiers CSV de Data ameli ont été analysés puis intégrés dans SQLite avec DBeaver. Trois référentiels, `Regions`, `Departements` et `ProfessionsSante`, sont reliés aux tables de données par des clés étrangères :
